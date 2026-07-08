@@ -1,8 +1,13 @@
 {
   "name": "rayapatiranjithai-plugins",
+  "description": "Prompt-engineering tools for Claude Code — live prompt-quality coaching scored against documented standards.",
   "owner": {
     "name": "Ranjith Rayapati",
     "url": "https://github.com/rayapatiranjithai"
+  },
+  "metadata": {
+    "description": "Prompt-engineering tools for Claude Code — live prompt-quality coaching scored against documented standards.",
+    "version": "1.0.0"
   },
   "plugins": [
     {
