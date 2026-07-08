@@ -1,0 +1,15 @@
+{
+  "name": "rayapatiranjithai-plugins",
+  "owner": {
+    "name": "Ranjith Rayapati",
+    "url": "https://github.com/rayapatiranjithai"
+  },
+  "plugins": [
+    {
+      "name": "prompt-analyzer",
+      "source": ".",
+      "description": "Analyzes and coaches how you write prompts, scored against Anthropic's documented prompt-engineering standards, with persistent per-session statistics.",
+      "version": "1.0.0"
+    }
+  ]
+}

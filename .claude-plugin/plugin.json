@@ -1,0 +1,12 @@
+{
+  "name": "prompt-analyzer",
+  "description": "Analyzes and coaches how the user writes prompts, measured against Anthropic's prompt-engineering standards, with persistent per-session statistics.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Ranjith Rayapati",
+    "url": "https://github.com/rayapatiranjithai"
+  },
+  "homepage": "https://github.com/rayapatiranjithai/prompt-analyzer",
+  "repository": "https://github.com/rayapatiranjithai/prompt-analyzer",
+  "license": "MIT"
+}
