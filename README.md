@@ -86,7 +86,8 @@ Other config keys: `auto_observe` (hook coaches every prompt), `coach_one_habit_
 a single focus habit). See the `_help` block in `config.json`.
 
 Session data lives in `.prompt-analyzer/<session-id>.json` and is **git-ignored** by default; only
-`config.json` is tracked.
+`config.json` is tracked. The plugin runs entirely locally with no telemetry — see
+[PRIVACY.md](PRIVACY.md).
 
 ## Usage
 
