@@ -1,0 +1,62 @@
+name: Bug report
+description: Report something not working as expected in prompt-analyzer
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the report! Please redact any sensitive text from prompts before pasting.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the bug and what you expected instead.
+      placeholder: The Analysis Window showed ... but I expected ...
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The exact prompt or steps that trigger it (redact secrets).
+      placeholder: |
+        1. Invoke /prompt-analyzer:analyze-prompt
+        2. Send the prompt "..."
+        3. See ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part?
+      options:
+        - analyze-prompt (coaching / scoring / Analysis Window)
+        - prompt-report (session summary)
+        - hooks (auto-invocation / bypass)
+        - privacy / redaction
+        - install / marketplace
+        - other
+    validations:
+      required: true
+  - type: input
+    id: cc-version
+    attributes:
+      label: Claude Code version
+      description: Output of `claude --version`.
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: OS / shell
+      placeholder: e.g. Windows 11 (WSL2), bash
+    validations:
+      required: false
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant config
+      description: Your `.prompt-analyzer/config.json` if changed from defaults.
+      render: json
+    validations:
+      required: false

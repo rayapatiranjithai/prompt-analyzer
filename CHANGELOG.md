@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Add `CONTRIBUTING.md`, issue forms (bug / feature), and a pull-request template.
+
 ## 1.0.0
 
 - Initial release of prompt-analyzer.

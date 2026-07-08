@@ -103,6 +103,7 @@ prompt-analyzer/
 ├── .claude-plugin/
 │   ├── plugin.json                 # plugin manifest
 │   └── marketplace.json            # marketplace listing (source: ".")
+├── .github/                        # issue forms + pull-request template
 ├── hooks/
 │   └── hooks.json                  # UserPromptSubmit auto-invocation (bypass with *)
 ├── skills/
@@ -115,10 +116,16 @@ prompt-analyzer/
 │   ├── config.json                 # privacy settings (tracked)
 │   └── <session-id>.json           # per-session stats (runtime, git-ignored)
 ├── CHANGELOG.md
+├── CONTRIBUTING.md
 ├── LICENSE
 ├── .gitignore
 └── README.md
 ```
+
+## Contributing
+
+Contributions are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Use the issue templates for bugs
+and feature requests, and the pull-request template when opening a PR.
 
 ## Validate & publish to a marketplace
 
