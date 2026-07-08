@@ -1,3 +1,0 @@
-# Never commit captured session data — may contain user prompt text
-*.json
-!config.json

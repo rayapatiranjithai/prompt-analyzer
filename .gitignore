@@ -1,0 +1,11 @@
+# Per-session analysis data (may contain user prompt text) — never commit
+.prompt-analyzer/*.json
+!.prompt-analyzer/config.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/

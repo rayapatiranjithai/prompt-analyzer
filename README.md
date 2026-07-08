@@ -100,9 +100,9 @@ Session data lives in `.prompt-analyzer/<session-id>.json` and is **git-ignored*
 
 ```
 prompt-analyzer/
-├── marketplace.json                # marketplace listing (source: ".")
 ├── .claude-plugin/
-│   └── plugin.json                 # plugin manifest
+│   ├── plugin.json                 # plugin manifest
+│   └── marketplace.json            # marketplace listing (source: ".")
 ├── hooks/
 │   └── hooks.json                  # UserPromptSubmit auto-invocation (bypass with *)
 ├── skills/
@@ -113,8 +113,10 @@ prompt-analyzer/
 │       └── SKILL.md                # end-of-session summary (read-only)
 ├── .prompt-analyzer/
 │   ├── config.json                 # privacy settings (tracked)
-│   ├── .gitignore                  # blocks session data from git
-│   └── <session-id>.json           # per-session stats (runtime)
+│   └── <session-id>.json           # per-session stats (runtime, git-ignored)
+├── CHANGELOG.md
+├── LICENSE
+├── .gitignore
 └── README.md
 ```
 
@@ -126,8 +128,8 @@ Validate the manifest and skills before sharing:
 claude plugin validate /path/to/prompt-analyzer
 ```
 
-This repo doubles as its own **marketplace** — `marketplace.json` at the root lists this plugin with
-`"source": "."`, so once the repo is public, users can add it and install directly:
+This repo doubles as its own **marketplace** — `.claude-plugin/marketplace.json` lists this plugin
+with `"source": "."`, so once the repo is public, users can add it and install directly:
 
 ```
 /plugin marketplace add rayapatiranjithai/prompt-analyzer
