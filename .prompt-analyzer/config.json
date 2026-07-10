@@ -1,12 +1,12 @@
 {
   "privacy_mode": "redact_pii",
   "store_raw_prompts": true,
-  "auto_observe": true,
+  "auto_observe": false,
   "coach_one_habit_at_a_time": true,
   "_help": {
     "privacy_mode": "raw = verbatim | redact_pii = mask PII (default) | hashed = store only a hash prefix, no text | metadata_only = no text or hash",
     "store_raw_prompts": "must also be true for privacy_mode 'raw' to take effect",
-    "auto_observe": "true = the UserPromptSubmit hook coaches every prompt; false = manual /analyze-prompt only. Prefix any prompt with * to skip once.",
+    "auto_observe": "false (current) = manual only; coaching runs only when you invoke /prompt-analyzer:analyze-prompt. To coach every prompt, set true AND restore the UserPromptSubmit hook in hooks/hooks.json (see its _disabled_UserPromptSubmit block). Prefix any prompt with * to skip once.",
     "coach_one_habit_at_a_time": "true = headline a single focus habit per prompt instead of listing every flaw"
   }
 }

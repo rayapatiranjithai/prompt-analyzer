@@ -16,7 +16,7 @@ standard-compliant way to ask — with a concrete rewrite every time.
 
 ## Features
 
-- **Auto-invocation (hooks)** — a `UserPromptSubmit` hook coaches every prompt automatically; no need to call the skill manually. Prefix a prompt with `*` to skip it once.
+- **Manual invocation (default)** — coaching runs only when you invoke `/prompt-analyzer:analyze-prompt`; regular prompts are left alone. Optional auto-invocation on every prompt is available by restoring the `UserPromptSubmit` hook in `hooks/hooks.json` and setting `auto_observe: true` (prefix a prompt with `*` to skip a single one when auto-mode is on).
 - **Stage-aware, context-aware scoring** — classifies each prompt (exploration / diagnosis / execution / verification / action) and scores only the criteria that stage needs, so efficient short prompts like `run the tests` aren't unfairly penalized.
 - **Standards-based rubric** — reproducible, normalized 10-point score drawn from Anthropic's prompt-engineering guidance (clarity, context, examples, role, structure, output format, scoping…), with labeled bands (Excellent → Needs work) and a safety→correctness→format→style priority order.
 - **One focus habit at a time** — headlines the single highest-impact habit to build (from a canonical taxonomy) instead of dumping every flaw.

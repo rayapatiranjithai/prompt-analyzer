@@ -1,16 +1,15 @@
 {
-  "description": "Auto-invoke PromptCoach on every user prompt so coaching + stats run without manual /analyze-prompt. Bypass a single prompt by starting it with '*'.",
-  "hooks": {
-    "UserPromptSubmit": [
-      {
-        "matcher": "*",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "printf '%s' \"$CLAUDE_USER_PROMPT\" | grep -q '^\\*' && exit 0; printf '<system-reminder>PromptCoach is active. Before addressing the task, run the analyze-prompt skill on the prompt above: classify its stage, score it, update ${CLAUDE_PROJECT_DIR}/.prompt-analyzer/${CLAUDE_SESSION_ID}.json, and show the Analysis Window + coaching. A prompt starting with * is exempt.</system-reminder>'"
-          }
-        ]
-      }
-    ]
-  }
+  "description": "Auto-invocation is DISABLED. PromptCoach runs only when the user explicitly invokes a skill: /prompt-analyzer:analyze-prompt (live coaching) or /prompt-analyzer:prompt-report (session summary). To re-enable coaching on every prompt, restore the UserPromptSubmit hook shown in the commented block below and set auto_observe:true in .prompt-analyzer/config.json.",
+  "hooks": {},
+  "_disabled_UserPromptSubmit": [
+    {
+      "matcher": "*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "printf '%s' \"$CLAUDE_USER_PROMPT\" | grep -q '^\\*' && exit 0; printf '<system-reminder>PromptCoach is active. Before addressing the task, run the analyze-prompt skill on the prompt above: classify its stage, score it, update ${CLAUDE_PROJECT_DIR}/.prompt-analyzer/${CLAUDE_SESSION_ID}.json, and show the Analysis Window + coaching. A prompt starting with * is exempt.</system-reminder>'"
+        }
+      ]
+    }
+  ]
 }
