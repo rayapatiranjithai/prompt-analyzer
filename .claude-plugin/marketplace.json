@@ -7,14 +7,14 @@
   },
   "metadata": {
     "description": "Prompt-engineering tools for Claude Code — live prompt-quality coaching scored against documented standards.",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "prompt-analyzer",
       "source": ".",
       "description": "Analyzes and coaches how you write prompts, scored against Anthropic's documented prompt-engineering standards, with persistent per-session statistics.",
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   ]
 }

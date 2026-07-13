@@ -70,7 +70,7 @@ Privacy is controlled by `.prompt-analyzer/config.json`:
 {
   "privacy_mode": "redact_pii",
   "store_raw_prompts": true,
-  "auto_observe": true,
+  "auto_observe": false,
   "coach_one_habit_at_a_time": true
 }
 ```
@@ -82,8 +82,9 @@ Privacy is controlled by `.prompt-analyzer/config.json`:
 | `hashed` | Store only a hash prefix — no readable text — used to dedupe repeated prompts. |
 | `metadata_only` | Store no prompt text or hash — only scores, habits, and derived metrics. |
 
-Other config keys: `auto_observe` (hook coaches every prompt), `coach_one_habit_at_a_time` (headline
-a single focus habit). See the `_help` block in `config.json`.
+Other config keys: `auto_observe` (default `false` = manual only; set `true` **and** restore the
+`UserPromptSubmit` hook in `hooks/hooks.json` to coach every prompt automatically),
+`coach_one_habit_at_a_time` (headline a single focus habit). See the `_help` block in `config.json`.
 
 Session data lives in `.prompt-analyzer/<session-id>.json` and is **git-ignored** by default; only
 `config.json` is tracked. The plugin runs entirely locally with no telemetry — see
@@ -106,7 +107,7 @@ prompt-analyzer/
 │   └── marketplace.json            # marketplace listing (source: ".")
 ├── .github/                        # issue forms + pull-request template
 ├── hooks/
-│   └── hooks.json                  # UserPromptSubmit auto-invocation (bypass with *)
+│   └── hooks.json                  # auto-invocation DISABLED by default (opt-in; see file)
 ├── skills/
 │   ├── analyze-prompt/
 │   │   ├── SKILL.md                # live coaching + stats
