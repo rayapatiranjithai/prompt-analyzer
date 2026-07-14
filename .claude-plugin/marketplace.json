@@ -15,6 +15,15 @@
       "source": ".",
       "description": "Analyzes and coaches how you write prompts, scored against Anthropic's documented prompt-engineering standards, with persistent per-session statistics.",
       "version": "1.1.0"
+    },
+    {
+      "name": "standup",
+      "source": {
+        "source": "github",
+        "repo": "rayapatiranjithai/standup"
+      },
+      "description": "Assembles a copy-ready Yesterday/Today/Blockers standup from live git activity (and optional GitHub PRs). Fully local and stateless.",
+      "version": "0.1.0"
     }
   ]
 }
